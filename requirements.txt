@@ -1,0 +1,43 @@
+# ONYX Requirements v10
+# Mise à jour : deps réelles complètes (reminders, voice, youtube inclus)
+
+customtkinter>=5.2.0
+requests>=2.31.0
+psutil>=5.9.0
+pyautogui>=0.9.54
+pygetwindow>=0.0.9
+pyperclip>=1.8.2
+beautifulsoup4>=4.12.0
+
+# ddgs v6+ a changé l'API — import utilisé : from ddgs import DDGS (ok v6+)
+ddgs>=6.0.0
+
+fastapi>=0.110.0
+uvicorn>=0.29.0
+pydantic>=2.6.0
+qrcode>=7.4.2
+pillow>=10.0.0
+pytesseract>=0.3.10
+opencv-python>=4.9.0
+pycaw>=20240210
+comtypes>=1.4.0
+screen-brightness-control>=0.22.0
+send2trash>=1.8.2
+
+# Reminders (notifs + TTS)
+schedule>=1.2.0
+pyttsx3>=2.90
+plyer>=2.1.0
+
+# YouTube résumé
+youtube-transcript-api>=0.6.2
+
+# Voice mode (Python 3.14 OK — faster-whisper incompatible, ne pas utiliser)
+openai-whisper>=20231117
+sounddevice>=0.4.6
+numpy>=1.24.0
+
+# ── Optionnel v11 (graceful fallback si absent) ──
+openwakeword>=0.6.0      # wake word "Hey ONYX" offline
+piper-tts>=1.2.0         # voix TTS naturelle (+ voix .onnx à télécharger), sinon pyttsx3
+tkinterdnd2>=0.4.0       # drag & drop fichiers dans le chat
