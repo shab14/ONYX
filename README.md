@@ -68,3 +68,8 @@ ONYX/
 ## Confidentialité
 
 ONYX tourne entièrement en local (LLM via Ollama, pas d'API cloud pour le cœur du système). Le fichier `.env` et les logs sont exclus du dépôt via `.gitignore`.
+
+## ⚠️ À faire avant/après avoir cloné ce dépôt
+
+- **Change le PIN par défaut.** `auth.py` contient un hash de PIN legacy (`_LEGACY_PIN_HASH`) avec un sel codé en dur dans le code source. Comme ce dépôt est public, ce PIN doit être considéré comme compromis. Lance `python auth.py set <nouveau_pin>` pour générer des credentials avec un sel aléatoire (stockés hors du code, dans `AppData/Roaming/ONYX/credentials.json`).
+- **Adapte les chemins codés en dur.** Certains fichiers (`config.py`, `README_RIVE_WAKE.md`) contiennent des exemples de chemins Windows type `C:\Users\<ton_user>\ONYX\...`. Remplace-les par ton propre nom d'utilisateur/chemin avant utilisation.
